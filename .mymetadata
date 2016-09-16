@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="ToriKo"
+  id="myeclipse.1437034341200"
+  context-root="/ToriKo"
+  j2ee-spec="5.0"
+  archive="ToriKo.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

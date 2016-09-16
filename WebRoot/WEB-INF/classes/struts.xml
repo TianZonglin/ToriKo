@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="default"  extends="struts-default">
+		
+		<action name="mylogin" class="test.test">   
+				<result name="success"  >/success.jsp</result>     
+				<result name="error"  >/fail.jsp</result>      
+		</action>
+			  
+<!-- login mapping -->	
+		<action name="checklogin" class="com.hzau.action.Login" method="checkLogin">
+		</action>	
+		<action name="doLogin" class="com.hzau.action.Login">
+		    <result name="error" >/index.jsp</result>
+			<result name="success" >/index.jsp</result>
+		</action>
+		<action name="loginout" class="com.hzau.action.Logout">
+			<result name="success" >/index.jsp</result>
+			<result name="error">/index.jsp</result>
+		</action>	
+		
+			  
+<!-- register mapping -->	
+		<action name="registerCheck" class="com.hzau.action.Register" method="personal">	   
+		</action>	
+		<action name="register" class="com.hzau.action.Register" >	  
+		</action>			
+		<action name="registerCheckCO" class="com.hzau.action.RegisterCO" method="company">	   
+		</action>	
+		<action name="registerCO" class="com.hzau.action.RegisterCO" >	   
+		</action>	
+		
+<!-- two mapping -->
+		<action name="saleAllView" class="com.hzau.action.SaleAllView">
+			<result name="success" >/sale/allview.jsp</result>
+		</action>			
+<!-- upload mapping -->		
+		<action name="buildfood" class="com.hzau.action.NewFood">
+			<result name="success">/company/advance.jsp</result>
+		</action>
+		<action name="co_delete" class="com.hzau.action.DeleteFood">
+			<result name="success">/company/advance.jsp</result>
+		</action>	
+		<action name="ajax_delete" class="com.hzau.action.DeleteFood" method="ajaxdel">
+			
+		</action>
+		
+		<action name="buynext" class="com.hzau.action.BuyNext" >
+			<result name="success">/sale/buynext.jsp</result>	
+		</action>
+		
+		<action name="defaluta" class="com.hzau.action.OrderFood" >
+			<result name="success"></result>	
+		</action>
+		<action name="orderfood" class="com.hzau.action.OrderFood" method="ajaxadd">	
+		</action>
+				
+				
+		<action name="checklist" class="com.hzau.action.CheckList">	
+			<result name="success">/sale/checklist.jsp</result>
+		</action>
+		<action name="checklist1" class="com.hzau.action.CheckList">	
+			<result name="success">/consumer/cchecklist.jsp</result>
+		</action>
+		<action name="checklist2" class="com.hzau.action.CheckList">	
+			<result name="success">/sale/cancelorder.jsp</result>
+		</action>
+		
+		<action name="storeInfo" class="com.hzau.action.CheckList" method="checkstore">
+			<result name="success" >/sale/checkstore.jsp</result>
+		</action> 
+
+
+		<action name="checkorder" class="com.hzau.action.CheckOrder" >
+			<result name="success" >/index.jsp</result>
+		</action> 
+		<action name="cancelorder" class="com.hzau.action.CheckOrder" method="cancelorder">
+			<result name="success" >/sale/aftercancel.jsp</result>
+		</action> 
+
+		<action name="checkDeals" class="com.hzau.action.CheckOrder" method="checkorder">
+			<result name="success" >/company/ordercheck.jsp</result>
+		</action> 
+<!-- 
+	    <action name="dilicious" class=" ">
+		<result name="success" >/ .jsp</result>
+		</action>  
+	    <action name="today" class=" ">
+		<result name="success" >/ .jsp</result>
+		</action>    
+		<action name="newTry" class=" ">
+			<result name="success" >/ .jsp</result>
+		</action>  
+		
+		
+		
+		<action name="changeWorks" class=" ">
+			<result name="success" >/ .jsp</result>
+		</action>    
+	
+	
+three mapping
+	
+	
+		
+four mapping
+		<action name="checkBought" class=" ">
+			<result name="success" >/ .jsp</result>
+		</action>  
+		<action name="updateBought" class=" ">
+			<result name="success" >/ .jsp</result>
+		</action>  
+		
+		
+		
+	
+		
+		
+		<action name="storeInfo" class=" ">
+			<result name="success" >/ .jsp</result>
+		</action> 
+
+ -->
+					
+		
+		
+		
+		
+		
+		
+		
+		
+			
+		</package>
+
+		
+ 
+		
+		
+		
+</struts> 	
